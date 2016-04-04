@@ -1,0 +1,12 @@
+{
+  "name": "rss-reader",
+  "version": "1.0.0",
+  "description": "RSS reader Laravel",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sosek108/rss-reader/issues"
+  },
+  "homepage": "https://github.com/sosek108/rss-reader#readme"
+}

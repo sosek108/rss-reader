@@ -1,0 +1,19 @@
+{
+    "name": "sosek108/rss-reader",
+    "description": "RSS Reader",
+    "authors": [
+        {
+            "name": "Hubert S",
+            "email": "sosek108@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Sosek\\RssReader\\": "src/"
+        }
+    }
+}
