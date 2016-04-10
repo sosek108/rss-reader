@@ -1,9 +1,14 @@
 # rss-reader
 
 # Installation
-Add this to the config\app's providers section: 
- ````Sosek\RssReader\RssReaderServiceProvider::class````
+* dodaj to w pliku config/app.php
+ Sosek\RssReader\RssReaderServiceProvider::class 
  
+* uruchom artisan vendor:publish
+
+* uruchom artisan migrate
+
+* przejdz na strone HOST/rss
  
 # Założenia projektowe
 * niewymagane sprawdzanie poprawności pliku xml.
