@@ -1,4 +1,4 @@
-//Contains app which displays rss entries
+//Plik JS obsługuje frontendową część API
 var rssApp = angular.module('rssApp', []);
 
 rssApp.controller('EntryController', function($scope, $http, $sce) {

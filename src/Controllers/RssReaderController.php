@@ -4,6 +4,8 @@
  * User: sosek108
  * Date: 04.04.16
  * Time: 20:58
+ *
+ * Wyświetlanie RSS
  */
 
 namespace Sosek\RssReader\Controllers;

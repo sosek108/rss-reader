@@ -4,6 +4,8 @@
  * User: sosek108
  * Date: 04.04.16
  * Time: 20:58
+ *
+ * Obsługuje API
  */
 
 namespace Sosek\RssReader\Controllers;
@@ -17,11 +19,18 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
 use Sosek\RssReader\RssEntry;
 
+/**
+ * Class RssEntryController
+ * @package Sosek\RssReader\Controllers
+ */
 class RssEntryController extends BaseController
 {
     /**
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
+     *
+     * AKtualizuje baze danych z zewnetrznym serwerem.
+     * Jako parametr w request trzeba podac 'url'
      */
     public function getUpdateFromOnline(Request $request)
     {
@@ -75,6 +84,11 @@ class RssEntryController extends BaseController
 
     }
 
+    /**
+     * @return \Illuminate\Http\JsonResponse
+     *
+     * Pobiera wszystkie elementy z bazy
+     */
     public function getAll()
     {
         $rssEntries = RssEntry::orderBy('created_at', 'desc')->get();
@@ -82,6 +96,12 @@ class RssEntryController extends BaseController
         return response()->json($rssEntries);
     }
 
+    /**
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     *
+     * Tworzy nowy element
+     */
     public function postCreate(Request $request)
     {
         $newTitle = $request->input('title');
@@ -101,6 +121,12 @@ class RssEntryController extends BaseController
         return response()->json($entry);
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\Routing\ResponseFactory|\Symfony\Component\HttpFoundation\Response
+     *
+     * Usuwa element
+     */
     public function deleteDestroy($id)
     {
         $entry = RssEntry::where(['id' => $id]);
@@ -114,6 +140,13 @@ class RssEntryController extends BaseController
 
     }
 
+    /**
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     *
+     * Akturalizuje element
+     */
     public function patchUpdate(Request $request, $id)
     {
         $edit = false;

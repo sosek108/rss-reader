@@ -1,3 +1,4 @@
+//Cześć JS  wykonywana zawsze
 $(document).ready(function() {
 
 
