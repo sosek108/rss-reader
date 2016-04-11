@@ -11,6 +11,6 @@
 * przejdz na strone HOST/rss
  
 # Założenia projektowe
-* niewymagane sprawdzanie poprawności pliku xml.
+* niewymagane sprawdzanie poprawności pliku xml. Zalozylem, ze plik bedzie zgodny ze standardem ATOM.
 * niewymagane użycie narzędzi frontendowych (gulp etc)
 
